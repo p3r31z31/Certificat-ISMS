@@ -11,55 +11,59 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: #f5f7fb;
-      color: #111827;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
+      background: radial-gradient(circle at top, #f5f7ff, #eef2ff);
+      color: #0f172a;
       display: flex;
       justify-content: center;
       padding: 40px 16px;
+      min-height: 100vh;
     }
 
     .wrapper {
       width: 100%;
-      max-width: 900px;
+      max-width: 920px;
     }
 
-    header {
-      text-align: left;
-      margin-bottom: 16px;
+    .hero {
+      margin-bottom: 18px;
+      padding: 6px 4px;
     }
 
-    h1 {
-      font-size: 20px;
-      margin: 0;
+    .title {
+      font-size: 22px;
       font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0;
     }
 
-    p {
-      margin: 6px 0 0;
-      color: #6b7280;
+    .subtitle {
+      margin-top: 6px;
       font-size: 14px;
+      color: rgba(15, 23, 42, 0.6);
     }
 
     .card {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     }
 
     iframe {
       width: 100%;
-      height: 70vh;
+      height: 72vh;
       border: none;
       display: block;
     }
 
     .actions {
       display: flex;
-      gap: 10px;
-      margin-top: 12px;
+      gap: 12px;
+      margin-top: 14px;
       flex-wrap: wrap;
     }
 
@@ -67,32 +71,50 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: 1px solid #d1d5db;
-      color: #111827;
-      background: white;
+      padding: 10px 16px;
+      border-radius: 999px;
       transition: all 0.2s ease;
     }
 
-    a.primary {
-      background: #2563eb;
+    .primary {
+      background: #007aff;
       color: white;
-      border: none;
+      box-shadow: 0 6px 16px rgba(0, 122, 255, 0.25);
+    }
+
+    .secondary {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+      backdrop-filter: blur(10px);
     }
 
     a:hover {
       transform: translateY(-1px);
+      opacity: 0.9;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0, 122, 255, 0.08);
+      color: #007aff;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
 
   <div class="wrapper">
-    <header>
-      <h1>Certificat d’assistència al Fòrum ISMS (Ciberseguretat)</h1>
-      <p>Document verificable en línia</p>
-    </header>
+
+    <div class="hero">
+      <h1 class="title">Certificat d’assistència al Fòrum ISMS</h1>
+      <div class="subtitle">Ciberseguretat · Document verificable en línia</div>
+      <div class="badge">✔ Verificat</div>
+    </div>
 
     <div class="card">
       <iframe src="https://drive.google.com/file/d/1HDM9IS-5beEMjmTRjGDheUwg6JW6TlzR/preview"></iframe>
@@ -100,8 +122,9 @@
 
     <div class="actions">
       <a class="primary" href="https://drive.google.com/file/d/1HDM9IS-5beEMjmTRjGDheUwg6JW6TlzR/view" target="_blank">Obrir</a>
-      <a href="https://drive.google.com/file/d/1HDM9IS-5beEMjmTRjGDheUwg6JW6TlzR/view" target="_blank">Descarregar</a>
+      <a class="secondary" href="https://drive.google.com/file/d/1HDM9IS-5beEMjmTRjGDheUwg6JW6TlzR/view" target="_blank">Descarregar</a>
     </div>
+
   </div>
 
 </body>
